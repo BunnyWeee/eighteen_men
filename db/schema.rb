@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_10_24_111949) do
 
   create_table "missions", force: :cascade do |t|
     t.string "name"
-    t.integer "priority"
+    t.integer "priority", default: 1
     t.integer "status"
     t.datetime "start_time"
     t.datetime "complete_time"
