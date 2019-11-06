@@ -1,4 +1,5 @@
 class MissionsController < ApplicationController
+  before_action :find_mission, only: [:edit, :update, :destroy]
 
   def index
     @missions = Mission.all
@@ -18,12 +19,9 @@ class MissionsController < ApplicationController
   end
 
   def edit
-    @mission = Mission.find(params[:id])
   end
 
   def update
-    @mission = Mission.find(params[:id])
-
     if @mission.update(mission_params)
       redirect_to root_path, notice: "Mission edited successfully!!!"
     else 
@@ -32,7 +30,6 @@ class MissionsController < ApplicationController
   end
 
   def destroy
-    @mission = Mission.find(params[:id])
     @mission.destroy if @mission
     redirect_to root_path, notice: "Mission deleted successfully!!!"
   end
@@ -40,5 +37,9 @@ class MissionsController < ApplicationController
   private
   def mission_params
     params.require(:mission).permit(:name, :priority, :status, :start_time, :complete_time)
+  end
+
+  def find_mission
+    @mission = Mission.find(params[:id])
   end
 end
