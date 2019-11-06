@@ -43,7 +43,6 @@ group :development, :test do
   gem 'hirb-unicode', '~> 0.0.5'
   gem 'pry-rails', '~> 0.3.9'
   gem 'rspec-rails', '~> 3.9'
-  gem 'capybara'
   gem 'faker', '~> 2.6'
   gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
 end
