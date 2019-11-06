@@ -3,7 +3,7 @@ class CreateMissions < ActiveRecord::Migration[5.2]
     create_table :missions do |t|
       t.string :name
       t.integer :priority, default:1
-      t.integer :status
+      t.integer :status, default:0
       t.datetime :start_time
       t.datetime :complete_time
 

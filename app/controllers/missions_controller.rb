@@ -18,11 +18,11 @@ class MissionsController < ApplicationController
   end
 
   def edit
-    @mission = Mission.find_by(id: params[:id])
+    @mission = Mission.find(params[:id])
   end
 
   def update
-    @mission = Mission.find_by(id: params[:id])
+    @mission = Mission.find(params[:id])
 
     if @mission.update(mission_params)
       redirect_to root_path, notice: "Mission edited successfully!!!"
@@ -32,7 +32,7 @@ class MissionsController < ApplicationController
   end
 
   def destroy
-    @mission = Mission.find_by(id: params[:id])
+    @mission = Mission.find(params[:id])
     @mission.destroy if @mission
     redirect_to root_path, notice: "Mission deleted successfully!!!"
   end
