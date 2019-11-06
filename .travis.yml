@@ -2,3 +2,8 @@ language: ruby
 rvm:
   - 2.6.3
   - jruby
+services:
+  - postgresql
+test:
+  adapter: postgresql
+  database: eighteen_men_test
