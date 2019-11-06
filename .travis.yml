@@ -4,8 +4,8 @@ rvm:
   - jruby
 services:
   - postgresql
-before_script:
-  - psql -c 'create database eighteen_men_test;' -U postgres
 test:
   adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: eighteen_men_test
