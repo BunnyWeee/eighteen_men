@@ -1,6 +1,8 @@
-<h1>Mission list here</h1>
+<h1><%= t("Mission_List")%></h1>
 
-<%= link_to "new mission", new_mission_path %>
+
+
+<%= link_to "新增任務", new_mission_path %>
 
 <table>
   <thead>
@@ -17,8 +19,8 @@
     <% @missions.each do |mission| %>
     <tr>
       <td> <%= mission.name %></td>
-      <td> <%= mission.priority %></td>
-      <td> <%= mission.status  %></td>
+      <td> <%= t("#{mission.priority}") %></td>
+      <td> <%= t("#{mission.status}")  %></td>
       <td> <%= mission.start_time %></td>
       <td> <%= mission.complete_time %></td>
       <td>
@@ -29,3 +31,6 @@
     <% end %>
   </tbody>
 </table>
+
+<%= link_to "中文版", :controller => controller_name, :action => action_name, :locale => "zh-TW" %>
+<%= link_to "English", :controller => controller_name, :action => action_name, :locale => "en" %>

@@ -1,5 +1,5 @@
-<h1> Create new mission</h1>
+<h1><%= t('Create_new_mission') %></h1>
 
 <%= render "form", mission: @mission %>
 
-<%= link_to "back to mission list", root_path %>
+<%= link_to t("back_to_mission_list"), root_path %>
