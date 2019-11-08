@@ -1,31 +1,34 @@
-<h1>Mission list here</h1>
+<h1><%= t("mission.list")%></h1>
 
-<%= link_to "new mission", new_mission_path %>
+<%= link_to t("mission.new"), new_mission_path, class:"btn btn-sm btn-success" %>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <td>任務名稱</td>
-      <td>優先次序</td>
-      <td>任務狀態</td>
-      <td>開始時間</td>
-      <td>截止時間</td>
-      <td>功能</td>
+      <td><%= t("mission.name") %> </td>
+      <td><%= t("mission.priority") %> </td>
+      <td><%= t("mission.status") %> </td>
+      <td><%= t("mission.start_time") %> </td>
+      <td><%= t("mission.complete_time") %> </td>
+      <td></td>
     </tr>
   </thead>
   <tbody>
     <% @missions.each do |mission| %>
     <tr>
       <td> <%= mission.name %></td>
-      <td> <%= mission.priority %></td>
-      <td> <%= mission.status  %></td>
+      <td> <%= t("#{mission.priority}") %></td>
+      <td> <%= t("#{mission.status}")  %></td>
       <td> <%= mission.start_time %></td>
       <td> <%= mission.complete_time %></td>
       <td>
-        <%= link_to "編輯", edit_mission_path(mission)%>
-        <%= link_to "刪除", mission_path(mission), method: "delete", data: { confirm: "are you sure?"} %>
+        <%= link_to t("botton.edit"), edit_mission_path(mission), class:"btn btn-lx btn-warning"%>
+        <%= link_to t("botton.delete"), mission_path(mission), method: "delete", data: { confirm: "are you sure?"} %>
       </td>
     </tr>
     <% end %>
   </tbody>
 </table>
+
+<%= link_to "中文版", :controller => controller_name, :action => action_name, :locale => "zh-TW" %>
+<%= link_to "English", :controller => controller_name, :action => action_name, :locale => "en" %>
