@@ -30,6 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  form:
+    name: Name
+    priority: Priority
+    status: Status
+    start_time: "Start time"
+    complete_time: "Complete time"
   Mission_List: 'Mission List'
   Create_new_mission: "Create New Mission"
   Edit_Mission: "Edit Mission"

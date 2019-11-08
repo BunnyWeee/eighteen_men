@@ -1,26 +1,26 @@
 <%= form_for(@mission) do |m| %>
   <div class="wrap">
-    <%= m.label :name, "任務名稱" %>
+    <%= m.label :name, t('form.name') %>
     <%= m.text_field :name  %>
   </div>
 
   <div class="wrap">
-    <%= m.label :priority, "優先次序" %>
+    <%= m.label :priority, t('form.priority') %>
     <%= m.text_field :priority %>
   </div>
   
   <div class="wrap">
-    <%= m.label :status, "任務狀態" %>
+    <%= m.label :status, t('form.status') %>
     <%= m.text_field :status  %>
   </div>
   
   <div class="wrap">
-    <%= m.label :start_time, "開始時間" %>
+    <%= m.label :start_time, t('form.start_time') %>
     <%= m.text_field :start_time  %>
   </div>
   
   <div class="wrap">
-    <%= m.label :complete_time, "截止時間" %>
+    <%= m.label :complete_time, t('form.complete_time') %>
     <%= m.text_field :complete_time  %>
   </div>
   
