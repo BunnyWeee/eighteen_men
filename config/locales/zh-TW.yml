@@ -1,13 +1,24 @@
 zh-TW:
-  form:
+  simple_form:
+    labels:
+      defaults:
+        name: 任務名稱
+        priority: 優先順序
+        status: 任務狀態
+        start_time: 開始時間
+        complete_time: 結束時間
+  mission:
+    list: 任務列表
+    new: 新增任務
+    edit: 編輯任務
     name: 任務名稱
     priority: 優先順序
     status: 任務狀態
     start_time: 開始時間
     complete_time: 結束時間
-  Mission_List: 任務列表
-  Create_new_mission: 新增任務
-  Edit_Mission: 編輯任務
+  botton:
+    edit: 編輯
+    delete: 刪除
   normal: 一般
   important: 機密
   pending: 佇列中

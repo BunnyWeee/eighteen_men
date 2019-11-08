@@ -30,16 +30,27 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  form:
+  simple_form:
+    lables:
+      defaults:
+        name: Name
+        priority: Priority
+        status: Status
+        start_time: "Start time"
+        complete_time: "Complete time"
+  mission:
+    list: "Mission List"
+    new: "Create New Mission"
+    edit: "Edit Mission"
     name: Name
     priority: Priority
     status: Status
     start_time: "Start time"
-    complete_time: "Complete time"
-  Mission_List: 'Mission List'
-  Create_new_mission: "Create New Mission"
-  Edit_Mission: "Edit Mission"
-  back_to_mission_list: Back to mission list
+    complete_time: "complete time"
+  botton:
+    edit: Edit
+    delete: Delete
+  back_to_mission_list: B a c k
   Confirm: Confirm
   activerecord:
     errors:

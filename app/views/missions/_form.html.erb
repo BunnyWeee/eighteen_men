@@ -1,28 +1,28 @@
-<%= form_for(@mission) do |m| %>
-  <div class="wrap">
-    <%= m.label :name, t('form.name') %>
-    <%= m.text_field :name  %>
+<%= simple_form_for(@mission) do |m| %>
+  <div class="form-group col-sm-6">
+    <%#= m.label :name, t('form.name') %>
+    <%#= m.text_field :name  %>
+    <%= m.input :name %>
   </div>
 
-  <div class="wrap">
-    <%= m.label :priority, t('form.priority') %>
-    <%= m.text_field :priority %>
+  <div class="form-group col-sm-6">
+    <%= m.input :priority %>
   </div>
   
-  <div class="wrap">
-    <%= m.label :status, t('form.status') %>
-    <%= m.text_field :status  %>
+  <div class="form-group col-sm-6">
+    <%= m.input :status %>
   </div>
   
-  <div class="wrap">
-    <%= m.label :start_time, t('form.start_time') %>
-    <%= m.text_field :start_time  %>
+  <div class="form-group col-sm-6">
+    <%= m.input :start_time %>
   </div>
   
-  <div class="wrap">
-    <%= m.label :complete_time, t('form.complete_time') %>
-    <%= m.text_field :complete_time  %>
+  <div class="form-group col-sm-6">
+    <%= m.input :complete_time %>
   </div>
   
-  <%= m.submit t("Confirm") %>
+  <div class="form-group">
+    <%= m.submit t("Confirm") %>
+  </div>
+  
 <% end %>
