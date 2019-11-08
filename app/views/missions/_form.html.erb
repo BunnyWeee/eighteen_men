@@ -1,26 +1,26 @@
 <%= simple_form_for(@mission) do |m| %>
-  <div class="form-group col-sm-6">
+  <div class="form-group">
     <%#= m.label :name, t('form.name') %>
     <%#= m.text_field :name  %>
     <%= m.input :name %>
   </div>
 
-  <div class="form-group col-sm-6">
+  <div class="form-group">
     <%= m.input :priority %>
   </div>
   
-  <div class="form-group col-sm-6">
+  <div class="form-group">
     <%= m.input :status %>
   </div>
   
-  <div class="form-group col-sm-6">
-    <%= m.input :start_time %>
+  <div class="form-group">
+    <%= m.input :start_time, as: :date, html5: true %>
   </div>
   
-  <div class="form-group col-sm-6">
-    <%= m.input :complete_time %>
+  <div class="form-group">
+    <%= m.input :complete_time, as: :date, html5: true %>
   </div>
-  
+
   <div class="form-group">
     <%= m.submit t("Confirm") %>
   </div>
