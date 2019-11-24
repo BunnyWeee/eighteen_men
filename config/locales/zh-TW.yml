@@ -16,16 +16,17 @@ zh-TW:
     complete_time: 結束時間
     status: 任務狀態
     priority: 優先順序
-  botton:
+  button:
     edit: 編輯
     delete: 刪除
   enums:
-    normal: 一般
-    important: 機密
-    pending: 佇列中
-    approved: 已通過
-    rejected: 已失敗
-    canceled: 已取消
+    status:
+      normal: 一般
+      important: 機密
+      pending: 佇列中
+      approved: 已通過
+      rejected: 已失敗
+      canceled: 已取消
     mission:
       status:
         pending: 佇列中

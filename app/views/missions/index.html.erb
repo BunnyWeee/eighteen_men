@@ -17,13 +17,13 @@
     <% @missions.each do |mission| %>
     <tr>
       <td> <%= mission.name %></td>
-      <td> <%= t("enums.#{mission.priority}") %></td>
-      <td> <%= t("enums.#{mission.status}")  %></td>
+      <td> <%= t("enums.status.#{mission.priority}") %></td>
+      <td> <%= t("enums.status.#{mission.status}")  %></td>
       <td> <%= mission.start_time %></td>
       <td> <%= mission.complete_time %></td>
       <td>
-        <%= link_to t("botton.edit"), edit_mission_path(mission), class:"btn btn-lx btn-warning"%>
-        <%= link_to t("botton.delete"), mission_path(mission), method: "delete", data: { confirm: "are you sure?"} %>
+        <%= link_to t("button.edit"), edit_mission_path(mission), class:"btn btn-lx btn-warning"%>
+        <%= link_to t("button.delete"), mission_path(mission), method: "delete", data: { confirm: "are you sure?"} %>
       </td>
     </tr>
     <% end %>
