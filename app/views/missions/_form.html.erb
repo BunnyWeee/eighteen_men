@@ -1,3 +1,13 @@
+<% if @mission.errors.present? %>
+  <ul>
+    <% @mission.errors.each do |error, message| %>
+      <li>
+        <%= "#{error.capitalize} "+ t('missions.validate.error') + " #{message}" %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= simple_form_for(mission) do |m| %>
   <div class="form-group">
     <%#= m.label :name, t('form.name') %>

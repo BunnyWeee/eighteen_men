@@ -38,6 +38,16 @@ zh-TW:
         important: 機密
   Confirm: 確認送出
   back_to_mission_list: 回到任務列表
+  missions:
+    create:
+      notice: 新增任務成功
+    update:
+      notice: 更新任務成功
+    destroy:
+      notice: 刪除任務成功
+    validate:
+      error: 欄位
+      placeholder: 必填
   activerecord:
     errors:
       messages:
