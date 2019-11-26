@@ -5,6 +5,18 @@ RSpec.feature "Missions", type: :feature do
     FactoryBot.create(:user)
   end
 
+  scenario "任務照時間順序排序" do
+    FactoryBot.create(:mission, name: "aa001")
+    FactoryBot.create(:mission, name: "bb001")
+    visit root_path
+    within 'tbody tr:nth-child(1)' do
+      expect(page).to have_content "bb001"
+    end
+    within 'tbody tr:nth-child(2)' do
+      expect(page).to have_content "aa001"
+    end
+  end
+
   scenario "新增任務" do
     visit root_path
     click_on "新增任務"
