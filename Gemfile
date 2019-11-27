@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 gem 'rails-i18n', '~> 5.1'
 gem 'simple_form'
+gem 'enum_help'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -45,7 +46,7 @@ group :development, :test do
   gem 'hirb-unicode', '~> 0.0.5'
   gem 'pry-rails', '~> 0.3.9'
   gem 'rspec-rails', '~> 3.9'
-  gem 'faker', '~> 2.6'
+  gem 'faker', '~> 2.7'
   gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
 end
 

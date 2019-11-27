@@ -2,7 +2,7 @@ class MissionsController < ApplicationController
   before_action :find_mission, only: [:edit, :update, :destroy]
 
   def index
-    @missions = Mission.all
+    @missions = Mission.order(created_at: :desc)
   end
 
   def new
@@ -12,7 +12,7 @@ class MissionsController < ApplicationController
   def create
     @mission = Mission.new(mission_params)
     if @mission.save
-      redirect_to root_path, notice: "Mission created successfully!!!"
+      redirect_to root_path, notice: t(".notice")
     else 
       render :new
     end
@@ -23,7 +23,7 @@ class MissionsController < ApplicationController
 
   def update
     if @mission.update(mission_params)
-      redirect_to root_path, notice: "Mission edited successfully!!!"
+      redirect_to root_path, notice: t(".notice")
     else 
       render :edit
     end
@@ -31,7 +31,7 @@ class MissionsController < ApplicationController
 
   def destroy
     @mission.destroy if @mission
-    redirect_to root_path, notice: "Mission deleted successfully!!!"
+    redirect_to root_path, notice: t(".notice")
   end
 
   private
