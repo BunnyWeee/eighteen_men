@@ -6,8 +6,4 @@ class Mission < ApplicationRecord
 
   validates :name, presence: true
 
-  def self.restricted_statuses
-    statuses.except :rejected, :canceled
-  end
-
 end
