@@ -20,9 +20,10 @@ RSpec.describe Mission, type: :model do
 
   describe "新增非標準任務" do
     it "僅添加任務名稱" do
-      mission = Mission.new
-      mission.name = "new_mission"
-      expect(mission.errors.full_messages).to eq "Description 欄位 不能為空白"
+      # mission = Mission.new
+      # mission.name = "new_mission"
+      mission = Mission.create(name: "NEWMISSION", description: "")
+      expect(mission.errors.full_messages).to eq ["Description 不能為空白"]
     end
   end
 end
