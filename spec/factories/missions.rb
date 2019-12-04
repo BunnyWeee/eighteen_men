@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :mission do
-    name { Faker::Games::LeagueOfLegends.champion }
+    name { "NEWMISSION" }
+    description { "description_test_here" }
   end
 end
