@@ -2,7 +2,7 @@
   <ul>
     <% @mission.errors.each do |error, message| %>
       <li>
-        <%= "#{error.capitalize} "+ t('missions.validate.error') + " #{message}" %>
+        <%= t("#{error} ") + t('missions.validate.error') + " #{message}" %>
       </li>
     <% end %>
   </ul>
@@ -12,7 +12,7 @@
   <div class="form-group">
     <%#= m.label :name, t('form.name') %>
     <%#= m.text_field :name  %>
-    <%= m.input :name %>
+    <%= m.input :name, error: '', hint: '任務名稱若有英文請皆以大寫表示，並勿加入任何符號字元' %>
   </div>
 
   <div class="form-group">
@@ -29,6 +29,10 @@
   
   <div class="form-group">
     <%= m.input :complete_time, as: :date, html5: true %>
+  </div>
+
+  <div class="form-group">
+    <%= m.input :description, placeholder: '請描述任務的內容，並確實確認內容無誤。' %>
   </div>
 
   <div class="form-group">

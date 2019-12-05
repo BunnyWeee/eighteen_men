@@ -7,6 +7,7 @@ zh-TW:
         status: 任務狀態
         start_time: 開始時間
         complete_time: 結束時間
+        description: 任務描述
   mission:
     list: 任務列表
     new: 新增任務
@@ -55,6 +56,14 @@ zh-TW:
         restrict_dependent_destroy:
           has_one: 由於 %{record} 需要此記錄，所以無法移除記錄
           has_many: 由於 %{record} 需要此記錄，所以無法移除記錄
+        invalid_date: "這不是個符合規定的日期！" 
+        invalid_time: "這不是個符合規定的時間！"
+        invalid_datetime: "選擇的日期並不符合規定！"
+        is_at: "選擇的時間應該要符合 %{restriction} 規定！"
+        before: "選擇的時間應該要在 %{restriction} 之前！"
+        on_or_before: "選擇的時間應該要在 %{restriction} 之前！"
+        after: "選擇的時間應該要在 %{restriction} 之後！"
+        on_or_after: "選擇的時間應該要在 %{restriction} 之後！"
   date:
     abbr_day_names:
     - 周日
