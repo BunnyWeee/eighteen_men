@@ -6,8 +6,8 @@ RSpec.feature "Missions", type: :feature do
   end
 
   scenario "任務照時間順序排序" do
-    FactoryBot.create(:mission, name: "MISSION001", description: "description_test")
-    FactoryBot.create(:mission, name: "MISSION002", description: "description_test")
+    FactoryBot.create(:mission, name: "MISSION001")
+    FactoryBot.create(:mission, name: "MISSION002")
     visit root_path
     within 'tbody tr:nth-child(1)' do
       expect(page).to have_content "MISSION002"
@@ -31,7 +31,7 @@ RSpec.feature "Missions", type: :feature do
   end
 
   scenario "編輯任務" do
-    FactoryBot.create(:mission, name: "ORIGINMISSION", description: "description_test")
+    FactoryBot.create(:mission, name: "ORIGINMISSION")
     visit root_path
     click_on "編輯"
     fill_in 'mission_name', with: "EDITMISSION"
@@ -46,7 +46,7 @@ RSpec.feature "Missions", type: :feature do
       # put line of code which triggers alert on page
     rescue Selenium::WebDriver::Error::UnhandledAlertError
       @browser.alert.ok 
-      FactoryBot.create(:mission, name: "NEWMISSION")
+      FactoryBot.create(:mission)
       visit root_path
       click_on "刪除"
       click_on "確認"
