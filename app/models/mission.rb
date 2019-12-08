@@ -7,4 +7,5 @@ class Mission < ApplicationRecord
   validates :name, format: { with: /\A[A-Z0-9]+\z/, message: "請注意英文只能使用大寫！" }, presence: true
   validates :description, presence: true
   # validates_datetime :complete_time, :after => :start_time 
+  scope :order_by_complete_time, -> { order(complete_time: :asc) }
 end
