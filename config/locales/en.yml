@@ -67,6 +67,7 @@ en:
         on_or_before: "must be on or before %{restriction}"
         after: "must be after %{restriction}"
         on_or_after: "must be on or after %{restriction}"
+        uppercaseonly: "Only allow uppercase"
   date:
     abbr_day_names:
     - Sun

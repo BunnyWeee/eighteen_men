@@ -63,7 +63,8 @@ zh-TW:
         before: "選擇的時間應該要在 %{restriction} 之前！"
         on_or_before: "選擇的時間應該要在 %{restriction} 之前！"
         after: "選擇的時間應該要在 %{restriction} 之後！"
-        on_or_after: "選擇的時間應該要在 %{restriction} 之後！"
+        on_or_after: "選擇的時間應該要在 %{restriction} 之後！" 
+        uppercaseonly: "請注意英文只能使用大寫！"
   date:
     abbr_day_names:
     - 周日
