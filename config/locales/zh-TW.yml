@@ -49,6 +49,8 @@ zh-TW:
     validate:
       error: 欄位
       placeholder: 必填
+    hint: 任務名稱若有英文請皆以大寫表示，並勿加入任何符號字元
+    placeholder: 請描述任務的內容，並確實確認內容無誤。
   activerecord:
     errors:
       messages:

@@ -12,7 +12,7 @@
   <div class="form-group">
     <%#= m.label :name, t('form.name') %>
     <%#= m.text_field :name  %>
-    <%= m.input :name, error: '', hint: '任務名稱若有英文請皆以大寫表示，並勿加入任何符號字元' %>
+    <%= m.input :name, error: '', hint: t("missions.hint") %>
   </div>
 
   <div class="form-group">
@@ -32,7 +32,7 @@
   </div>
 
   <div class="form-group">
-    <%= m.input :description, placeholder: '請描述任務的內容，並確實確認內容無誤。' %>
+    <%= m.input :description, placeholder: t("missions.placeholder") %>
   </div>
 
   <div class="form-group">

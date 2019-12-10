@@ -51,6 +51,17 @@ en:
     edit: Edit
     delete: Delete
   back_to_mission_list: B a c k
+  missions:
+    create:
+      notice: Create mission successfully!
+    update:
+      notice: Update mission successfully!
+    destroy:
+      notice: delete mission successfully!
+    validate:
+      placeholder: can't be empty!
+    hint: Uppercase or Numbers only
+    placeholder: Describe the mission details, please make sure.
   Confirm: Confirm
   activerecord:
     errors:
