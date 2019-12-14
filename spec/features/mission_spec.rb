@@ -5,16 +5,29 @@ RSpec.feature "Missions", type: :feature do
     FactoryBot.create(:user)
   end
 
-  scenario "任務照時間順序排序" do
-    FactoryBot.create(:mission, name: "MISSION001")
-    FactoryBot.create(:mission, name: "MISSION002")
+  # scenario "任務照時間順序排序" do
+  #   FactoryBot.create(:mission, name: "MISSION001")
+  #   FactoryBot.create(:mission, name: "MISSION002")
+  #   visit root_path
+  #   within 'tbody tr:nth-child(1)' do
+  #     expect(page).to have_content "MISSION002"
+  #   end
+  #   within 'tbody tr:nth-child(2)' do
+  #     expect(page).to have_content "MISSION001"
+  #   end
+  # end
+
+  scenario "任務照結束時間排序" do
+    FactoryBot.create(:mission, name: "MISSION001", complete_time: "2019-12-24" )
+    FactoryBot.create(:mission, name: "MISSION002", complete_time: "2019-12-25" )
     visit root_path
     within 'tbody tr:nth-child(1)' do
-      expect(page).to have_content "MISSION002"
-    end
-    within 'tbody tr:nth-child(2)' do
       expect(page).to have_content "MISSION001"
     end
+    within 'tbody tr:nth-child(2)' do
+      expect(page).to have_content "MISSION002"
+    end
+    
   end
 
   scenario "新增任務" do
@@ -54,4 +67,5 @@ RSpec.feature "Missions", type: :feature do
       expect(page).to have_content "任務刪除成功"
     end
   end
+
 end
