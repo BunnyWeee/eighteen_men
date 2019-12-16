@@ -1,8 +1,9 @@
 class MissionsController < ApplicationController
   before_action :find_mission, only: [:edit, :update, :destroy]
+  before_action :find_mission_ransack, only: [:index]
 
   def index
-    @missions = Mission.order_by_complete_time
+    @missions = @q.result.order_by_complete_time
   end
 
   def new
@@ -41,5 +42,9 @@ class MissionsController < ApplicationController
 
   def find_mission
     @mission = Mission.find(params[:id])
+  end
+
+  def find_mission_ransack
+    @q = Mission.ransack(params[:q])
   end
 end
