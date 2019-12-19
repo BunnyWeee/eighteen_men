@@ -3,7 +3,7 @@
 <%= link_to t("mission.new"), new_mission_path, class:"btn btn-sm btn-success" %>
 
 <%= search_form_for @q do |f| %>
-  <%= f.label :name %>
+  <%= f.label :name, t('mission.name') %>
   <%= f.search_field :name_cont %>
 
   <%= f.label :status %>
