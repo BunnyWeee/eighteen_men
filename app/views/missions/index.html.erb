@@ -7,7 +7,8 @@
   <%= f.search_field :name_cont %>
 
   <%= f.label :status, t('mission.status') %>
-  <%= f.search_field :status_eq %>
+  <%= f.select :status_eq,
+      Mission.statuses.map { |status| [status[0],[status[1]]] } %>
 
   <%= f.submit %>
 <% end %>
