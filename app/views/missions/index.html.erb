@@ -8,7 +8,7 @@
 
   <%= f.label :status, t('mission.status') %>
   <%= f.select :status_eq,
-      Mission.statuses.map { |status| [status[0],[status[1]]] } %>
+      Mission.statuses.map { |status| [t("enums.status.#{status[0]}"), status[1]] } %>
 
   <%= f.submit %>
 <% end %>
