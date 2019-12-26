@@ -4,7 +4,7 @@
 
 <%= search_form_for @q do |f| %>
   <%= f.label :name, t('mission.name') %>
-  <%= f.search_field :name_cont %>
+  <%= f.search_field :name_cont, placeholder: "write something" %>
 
   <%= f.label :status, t('mission.status') %>
   <%= f.select :status_eq,
@@ -17,14 +17,10 @@
   <thead>
     <tr>
       <td><%= t("mission.name") %> </td>
-      <td><%= sort_link(@q, :priority) %>
-        <%#= t("mission.priority") %> </td>
-      <td><%= sort_link(@q, :status) %>
-        <%#= t("mission.status") %> </td>
-      <td><%= sort_link(@q, :start_time) %>
-        <%#= t("mission.start_time") %> </td>
-      <td><%= sort_link(@q, :complete_time) %>
-        <%#= t("mission.complete_time") %> </td>
+      <td><%= sort_link(@q, :priority, t("mission.priority")) %></td>
+      <td><%= sort_link(@q, :status, t("mission.status")) %></td>
+      <td><%= sort_link(@q, :start_time, t("mission.start_time")) %></td>
+      <td><%= sort_link(@q, :complete_time, t("mission.complete_time")) %></td>
       <td></td>
     </tr>
   </thead>
