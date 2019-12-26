@@ -7,6 +7,7 @@ gem 'simple_form'
 gem 'enum_help'
 gem 'validates_timeliness', '~> 5.0.0.alpha5'
 gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'aasm', '~> 5.0', '>= 5.0.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
