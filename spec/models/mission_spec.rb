@@ -23,4 +23,9 @@ RSpec.describe Mission, type: :model do
       expect(mission.errors.full_messages).to eq ["Description 不能為空白"]
     end
   end
+
+  describe "針對查詢功能" do
+  
+  end
+
 end
