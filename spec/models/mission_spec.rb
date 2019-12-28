@@ -24,8 +24,10 @@ RSpec.describe Mission, type: :model do
     end
   end
 
-  describe "針對查詢功能" do
-  
+  describe "新任務狀態為佇列中" do
+    it "任務的預設狀態" do
+      
+    end
   end
 
 end
