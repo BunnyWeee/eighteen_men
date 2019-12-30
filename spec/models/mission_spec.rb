@@ -26,8 +26,16 @@ RSpec.describe Mission, type: :model do
 
   describe "新任務狀態為佇列中" do
     it "任務的預設狀態" do
-      mission = Mission.create
+      mission = Mission.create(name:"NEWMISSION", description:"mission_description")
       expect(mission.status).to eq "pending"
+    end
+  end
+
+  describe "編輯任務狀態" do
+    it "從佇列中至已完成" do
+      mission = Mission.create(name:"NEWMISSION", description:"mission_description")
+      mission.update(status:"approved")
+      expect(mission.status).to eq "approved"
     end
   end
 
