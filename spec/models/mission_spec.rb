@@ -39,4 +39,12 @@ RSpec.describe Mission, type: :model do
     end
   end
 
+  describe "查詢任務" do
+    it "可查詢任務" do
+      mission = Mission.create(name:"SEARCHMISSION", description:"search_test")
+      query = Mission.ransack(description_end:"test")
+      expect(query.result.pluck(:description).join).to eq "search_test"
+    end
+  end
+
 end
