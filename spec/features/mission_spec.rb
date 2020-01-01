@@ -68,4 +68,8 @@ RSpec.feature "Missions", type: :feature do
     end
   end
 
+  scenario "查詢功能" do
+    
+  end
+
 end
