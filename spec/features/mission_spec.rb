@@ -69,7 +69,18 @@ RSpec.feature "Missions", type: :feature do
   end
 
   scenario "查詢功能" do
-    
+    visit root_path
+    fill_in "q_name_cont", :with => "SSSS"
+    click_on "搜尋"
+    expect(page).not_to have_content "SSSS"
+  end
+
+  scenario "查詢任務" do
+    FactoryBot.create(:mission)
+    visit root_path
+    fill_in "q_name_cont", :with => "NEWMISSION"
+    click_on "搜尋"
+    expect(page).to have_content "NEWMISSION"
   end
 
 end
