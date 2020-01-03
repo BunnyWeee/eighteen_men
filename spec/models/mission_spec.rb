@@ -23,4 +23,28 @@ RSpec.describe Mission, type: :model do
       expect(mission.errors.full_messages).to eq ["Description 不能為空白"]
     end
   end
+
+  describe "新任務狀態為佇列中" do
+    it "任務的預設狀態" do
+      mission = FactoryBot.create(:mission)
+      expect(mission.status).to eq "pending"
+    end
+  end
+
+  describe "編輯任務狀態" do
+    it "從佇列中至已完成" do
+      mission = FactoryBot.create(:mission)
+      mission.approve!
+      expect(mission.status).to eq "approved"
+    end
+  end
+
+  describe "查詢任務" do
+    it "可查詢任務" do
+      mission = Mission.create(name:"SEARCHMISSION", description:"search_test")
+      query = Mission.ransack(description_end:"test")
+      expect(query.result.pluck(:description).join).to eq "search_test"
+    end
+  end
+
 end
