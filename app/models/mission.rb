@@ -26,6 +26,5 @@ class Mission < ApplicationRecord
     event :cancel do
       transitions from: :rejected, to: :canceled
     end
-
   end
 end
